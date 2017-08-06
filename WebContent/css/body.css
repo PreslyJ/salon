@@ -1,0 +1,10 @@
+body{
+	margin: 0px;
+	 padding: 0px;
+	  font-family:Arial,Verdana,Tahoma,sans-serif;
+	   min-height: 500px;}
+	   
+body, td, th, div {font-size: 12px;}
+
+select{font-size: 11px; /*padding: 2px; border: 1px solid #000000;*/}
+img{border: none;}

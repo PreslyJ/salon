@@ -1,0 +1,14 @@
+a:focus{outline:0px;}
+
+.nav > li > a {
+    padding: 5px;
+}
+
+.form-control{
+	width: auto;
+	display: inline;
+}
+
+.tab-content{
+	margin-top: 5px;
+}
