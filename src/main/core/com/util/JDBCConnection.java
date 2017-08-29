@@ -4,10 +4,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 public class JDBCConnection {
-	private static final String DRIVER="com.mysql.jdbc.jdbc2.optional.MysqlDataSource";
-	private static final String URL="jdbc:mysql://localhost:3306/inventry?useSSL=false";
-	private static final String USERNAME="root";
-	private static final String PASSWORD="root";
+	private static final String DRIVER="org.postgresql.Driver";
+	private static final String URL="jdbc:postgresql://localhost:5432/postgres";
+	private static final String USERNAME="postgres";
+	private static final String PASSWORD="123456";
 	public static Connection getConnection(){
 		try {
 			Class.forName(DRIVER);

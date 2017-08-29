@@ -17,7 +17,7 @@ public class LoginDAO {
 		con=JDBCConnection.getConnection();
 		try {
 			PreparedStatement query=con.prepareStatement("SELECT * FROM officer WHERE username=? and password=?");
-			query.setString(1, userName);
+			query.setString(1, userName.toLowerCase());
 			query.setString(2, encryptedPassword);
 			query.executeQuery();
 			ResultSet result=query.getResultSet(); 

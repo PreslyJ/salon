@@ -52,7 +52,7 @@ $(document).ready(function() {
 				fieldData2=data["menu2"];
 				var listFront = document.getElementById("front");
 				for( var i =  0 ; i < fieldData2.length ; i++){
-					listFront.innerHTML = listFront.innerHTML + "<a class='list'  id='"+fieldData2[i][1]+"'>"+fieldData2[i][0]+"</a>";
+					listFront.innerHTML = listFront.innerHTML + "<a class='list'  id='"+fieldData2[i][1]+"'>"+fieldData2[i][0]+"</a><br>";
             	}
 								
 				
@@ -67,20 +67,20 @@ $(document).ready(function() {
 				fieldData6=data["menu4"];
 				var listReport = document.getElementById("cusCare");
 				for( var i =  0 ; i < fieldData6.length ; i++){
-					listReport.innerHTML = listReport.innerHTML + "<a class='list'  id='"+fieldData6[i][1]+"'>"+fieldData6[i][0]+"</a>";
+					listReport.innerHTML = listReport.innerHTML + "<a class='list'  id='"+fieldData6[i][1]+"'>"+fieldData6[i][0]+"</a><br>";
             	}
 				
 				var fieldData7=new Array();
 				fieldData7=data["menu5"];
 				var listInfo = document.getElementById("report");
 				for( var i =  0 ; i < fieldData7.length ; i++){
-					listInfo.innerHTML = listInfo.innerHTML + "<a class='list'  id='"+fieldData7[i][1]+"'>"+fieldData7[i][0]+"</a>";
+					listInfo.innerHTML = listInfo.innerHTML + "<a class='list'  id='"+fieldData7[i][1]+"'>"+fieldData7[i][0]+"</a><br>";
             	}
 				var fieldData8=new Array();
 				fieldData8=data["menu6"];
 				var listInfo = document.getElementById("info");
 				for( var i =  0 ; i < fieldData8.length ; i++){
-					listInfo.innerHTML = listInfo.innerHTML + "<a class='list'  id='"+fieldData8[i][1]+"'>"+fieldData8[i][0]+"</a>";
+					listInfo.innerHTML = listInfo.innerHTML + "<a class='list'  id='"+fieldData8[i][1]+"'>"+fieldData8[i][0]+"</a><br>";
             	}
 			}
 		});
@@ -88,6 +88,9 @@ $(document).ready(function() {
 	$.getAll();
 });
   	$(document).ready(function(){
+  		$(document.body).on('click', '#titleWindow' ,function(){
+  			$("#contentPanel").load("title.jsp");
+  		});
   		$(document.body).on('click', '#clientRegistrationWindow' ,function(){
   			$("#contentPanel").load("ClientCreationS.jsp");
   		});

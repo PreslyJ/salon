@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.json.JSONArray;
 
 import com.domain.OfficerType;
+import com.salon.service.OfficerTypeDAOS;
 import com.service.OfficerTypeDAO;
 
 @WebServlet("/OfficerTypeS")
@@ -23,7 +24,7 @@ public class OfficerTypeServlet extends HttpServlet {
   		String method=request.getParameter("method");
   		
   		switch(method){
-		case "getAll" :   		List<OfficerType> officerTypes = OfficerTypeDAO.getAllOfficerTypes();
+		case "getAll" :   		List<OfficerType> officerTypes = OfficerTypeDAOS.getAllOfficerTypes();
 								JSONArray array = new JSONArray();
 								for (OfficerType officerType : officerTypes) {
 									JSONArray array2 = new JSONArray();
@@ -62,7 +63,7 @@ public class OfficerTypeServlet extends HttpServlet {
   		String code = request.getParameter("code");
 	    String description = request.getParameter("description");
 	    String status = request.getParameter("status");
-	    String result=OfficerTypeDAO.addOfficerType(code, description, status);
+	    String result=OfficerTypeDAOS.addOfficerType(code, description, status);
 	    return result;
   	}
   	
@@ -71,13 +72,13 @@ public class OfficerTypeServlet extends HttpServlet {
 		String description=request.getParameter("description");
 	    String status = request.getParameter("status");
 	    int officerTypeId = Integer.parseInt(request.getParameter("officerTypeId"));
-	    String result=OfficerTypeDAO.modifyOfficerType(code, description, status, officerTypeId);
+	    String result=OfficerTypeDAOS.modifyOfficerType(code, description, status, officerTypeId);
 	    return result;
   	}
   	
   	public static String deleteOfficerType(HttpServletRequest request){
 	    int loanTypeId = Integer.parseInt(request.getParameter("officerTypeId"));
-	    String result=OfficerTypeDAO.deleteOfficerType(loanTypeId);
+	    String result=OfficerTypeDAOS.deleteOfficerType(loanTypeId);
 	    return result;
   	}
 

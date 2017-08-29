@@ -63,7 +63,7 @@
 			var method = "getAll";
 			$.ajax({
 				type : "post",
-				url : "OfficerType",
+				url : "OfficerTypeS",
 				data : {
 					method : method
 				},
@@ -94,7 +94,7 @@
 	
 				$.ajax({
 					type : "post",
-					url : "OfficerType",
+					url : "OfficerTypeS",
 					data : {
 						method:"create",
 						code : code,
@@ -128,7 +128,7 @@
 				var method = "modify";
 				$.ajax({
 					type : "post",
-					url : "OfficerType",
+					url : "OfficerTypeS",
 					data : {
 						code : code,
 						description : description,
@@ -152,7 +152,7 @@
 			var method = "delete";
 			$.ajax({
 				type : "post",
-				url : "OfficerType",
+				url : "OfficerTypeS",
 				data : {
 					method : method,
 					officerTypeId : officerTypeId

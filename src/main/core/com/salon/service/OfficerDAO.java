@@ -24,7 +24,7 @@ public class OfficerDAO {
 			try {	 
 
 					PreparedStatement query=con.prepareStatement("SELECT * FROM officerS WHERE username=? ");
-					query.setString(1, userName);
+					query.setString(1, userName.toLowerCase());
 					query.executeQuery();
 					ResultSet result=query.getResultSet();     
 					if(result.next()){
@@ -38,7 +38,7 @@ public class OfficerDAO {
 					    query.setString(2, firstName);
 					    query.setString(3, surname);
 					    query.setInt(4, Integer.parseInt(officerTypeId));
-					    query.setString(5, userName);
+					    query.setString(5, userName.toLowerCase());
 					    query.setString(6, encryptedPassword);
 					    query.setString(7, status);
 					    query.setInt(8,createdUserId);
